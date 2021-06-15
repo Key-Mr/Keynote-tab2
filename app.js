@@ -1,9 +1,9 @@
+// @ts-check
 const express = require('express')
 const app = express()
+const path = require('path')
 
-app.get('/', function(){
-    res.send('Hello from express')
-})
+app.use(express.static(path.join(__dirname, 'public')))
 
 app.listen(3000, function() {
     console.log('Server stsrtred at https://localhost:3000')
